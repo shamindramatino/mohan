@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+    smartpipe-alertscheduler:
+      image: smartpipealert:1.0.9
+      container_name: smartpipe-alertscheduler
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - 80:3001
+      environment:
+        NODE_ENV: development
